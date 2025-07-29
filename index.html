@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <title>Python PR 提交規範</title>
+  <style>
+    body {
+      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 2em;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    h1, h2, h3 {
+      color: #2c3e50;
+    }
+    code {
+      background-color: #eee;
+      padding: 2px 4px;
+      border-radius: 4px;
+      font-family: monospace;
+    }
+    pre {
+      background-color: #eee;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1em;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 0.5em;
+      text-align: left;
+    }
+    ul {
+      line-height: 1.8;
+    }
+    .checkbox-list li {
+      list-style: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🧾 Python PR 提交規範說明文件</h1>
+  <p>為了確保程式碼品質一致並方便維護，請 <strong>在提交 PR 前務必遵守以下規範</strong>。這些規範適用於所有 Python 檔案與其內容。</p>
+
+  <h2>📌 一、通用規範</h2>
+  <h3>1.1 所有檔案最上方需加上 CopyRight 標示：</h3>
+  <pre><code># Copyright (c) 2025 &lt;Your Company Name&gt;. All rights reserved.</code></pre>
+  <ul>
+    <li>必須為檔案中的第一行。</li>
+    <li><code>&lt;Your Company Name&gt;</code> 可根據實際公司名稱替換。</li>
+  </ul>
+
+  <h3>1.2 檔案編碼</h3>
+  <ul>
+    <li>所有檔案皆需使用 UTF-8 編碼，無 BOM。</li>
+    <li>可加上以下編碼宣告（可選）：</li>
+  </ul>
+  <pre><code># -*- coding: utf-8 -*-</code></pre>
+
+  <h2>🧹 二、格式規範（PEP8 + 內部規範）</h2>
+  <h3>2.1 換行與縮排</h3>
+  <ul>
+    <li>使用 <strong>4 個空格</strong> 做為縮排（禁止使用 Tab）。</li>
+    <li>每行不得超過 <strong>100 個字元</strong>。</li>
+    <li>函式之間需空兩行。</li>
+    <li>類別之間需空兩行。</li>
+    <li>類別中的方法之間空一行。</li>
+  </ul>
+
+  <h3>2.2 空白規則（Spaces）</h3>
+  <ul>
+    <li>運算子前後需空一格：</li>
+    <pre><code>total = price * quantity</code></pre>
+    <li>函式定義與呼叫時，括號內不要多餘空格：</li>
+    <pre><code>def func(a, b)   # ✅
+func(a, b)        # ✅
+func( a, b )      # ❌</code></pre>
+    <li><code>,</code> 後應留空格：</li>
+    <pre><code>items = [1, 2, 3]</code></pre>
+  </ul>
+
+  <h3>2.3 匿名函式禁止多行</h3>
+  <ul>
+    <li><code>lambda</code> 僅允許一行，複雜邏輯請改用 <code>def</code>。</li>
+  </ul>
+
+
+
+
+
+  <h2>🚫 五、禁止事項</h2>
+  <ul>
+    <li>❌ 提交 <code>print()</code> 或 <code>pdb.set_trace()</code> 等 Debug 訊息</li>
+    <li>❌ 提交任何敏感資訊（帳密、token 等）</li>
+    <li>❌ 違反上述任一規範</li>
+  </ul>
+
+
+</body>
+</html>
